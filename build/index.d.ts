@@ -34,6 +34,7 @@ declare type Props = {
         xAxisMode?: AxisMode;
         yAxisMode?: AxisMode;
         xIsSeries?: 0 | 1;
+        formatYAxis?: (value: number, label: string) => any;
     };
     barOptions?: {
         spaceRatio?: number;
@@ -56,6 +57,7 @@ declare type Props = {
     tooltipOptions?: TooltipOptions;
     onDataSelect?: (event: SelectEvent) => void;
     valuesOverPoints?: 0 | 1;
+    formatValueOverPoint?: (value: number, label: string) => any;
 };
 declare const ReactFrappeChart: React.ForwardRefExoticComponent<Props & React.RefAttributes<unknown>>;
 export default ReactFrappeChart;

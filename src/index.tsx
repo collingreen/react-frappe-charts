@@ -39,6 +39,7 @@ type Props = {
     xAxisMode?: AxisMode;
     yAxisMode?: AxisMode;
     xIsSeries?: 0 | 1;
+    formatYAxis?: (value: number, label: string) => any;
   };
   barOptions?: {
     spaceRatio?: number;
@@ -61,6 +62,7 @@ type Props = {
   tooltipOptions?: TooltipOptions;
   onDataSelect?: (event: SelectEvent) => void;
   valuesOverPoints?: 0 | 1;
+  formatValueOverPoint?: (value: number, label: string) => any;
 };
 
 const ReactFrappeChart = forwardRef((props: Props, parentRef) => {
